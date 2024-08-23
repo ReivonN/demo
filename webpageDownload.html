@@ -1,0 +1,71 @@
+<!-- Reivon Naballin, 1583822, Assignment One, COMPX222-22B-->
+<!doctype html>
+<htm lang="en-NZ">
+<head>
+    <meta charset="utf-8">
+    <title>Webpage Download</title>
+    <link rel="stylesheet" href="css/style.css">
+	<!--GOOGLE FONT-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Poppins:ital@0;1&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="centre">	
+        <div>
+			<ul class="navBar">
+			  <li><a href="index.html">HTTP and HTTPS</a></li>
+			  <li class="is-active"><a>Webpage Download</a></li>
+			  <li><a href="request.html">Requests</a></li>
+			  <li><a href="getPost.html">Get and Post</a></li>
+			</ul>
+		</div>
+        <h1>How is a webpage downloaded?</h1>
+		<p>A web page begins loading as soon as the user puts in the <strong>initial request</strong> by typing in a URL, clicking a link, submitting a form or other actions. The server then begins to process the user’s request. 
+			The <strong>response start</strong> is then initiated when the request is processed and sends an HTML response back across the network to the user. The <strong>DOM</strong>(Document Object Model) then starts processing and when it finishes, the user will see the web page begin rendering.</p>
+		<p>This can be seen by using the browser's network console when loading a web page.</p>
+		<picture>
+			<source media="(max-width: 500px)" srcset="images/networkSmall.png">
+			<source media="(max-width: 900px)" srcset="images/networkMed.png">
+			<source media="(min-width: 1050px)" srcset="images/network.png">
+			<img src="images/network.png" alt="networkConsole" id="network">
+		</picture>
+		<p>The image above is the network console for the VMware Horizon web page for UOW remote computer labs with a total of 17 requests. We can see that the index.html is one of the first responses which indicates the response start. It is then followed by javascript, css styles and json files and lastly, the images which fill up the web page.</p>
+		<!--3x6 Table for the network console for better readability-->
+		<table>
+			<h2>Different Types of Content in Network</h2>
+			<tr>
+				<th>Name</th>
+				<th>Content Type</th>
+				<th>Request Line</th>
+			</tr>
+			<tr>
+				<td>index.html</td>
+				<td>text/html</td>
+				<td>GET /portal/webclient/index.html HTTP/1.1</td>
+			</tr>
+			<tr>
+				<td>app.htmlaccess...</td>
+				<td>application/javascript</td>
+				<td>not available</td>
+			</tr>
+			<tr>
+				<td>style.app-htmlaccess...</td>
+				<td>text/css</td>
+				<td>not available</td>
+			</tr>
+			<tr>
+				<td>xml</td>
+				<td>text/xml</td>
+				<td>POST /broker/xml HTTP/1.1</td>
+			</tr>
+			<tr>
+				<td>logo.png</td>
+				<td>image</td>
+				<td>GET /portal/webclient/icons-19431065/logo.png HTTP/1.1</td>
+			</tr>
+		</table>	
+		<a href="#top" class="toTop">back to top</a>
+	</div>
+</body>
+</html>

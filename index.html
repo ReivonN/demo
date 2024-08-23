@@ -1,0 +1,47 @@
+<!-- Reivon Naballin, 1583822, Assignment One, COMPX222-22B-->
+<!doctype html>
+<html lang="en-NZ">
+<head>
+    <meta charset="utf-8">
+    <title>HTTP and HTTPS</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--GOOGLE FONT-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Poppins:ital@0;1&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+	<!--Centre class to keep all items in the middle-->
+	<div class="centre">
+		<div>
+			<!--Navigation bar for access to all pages-->
+			<ul class="navBar">
+			  <li class="is-active"><a>HTTP and HTTPS</a></li>
+			  <li><a href="webpageDownload.html">Webpage Download</a></li>
+			  <li><a href="request.html">Requests</a></li>
+			  <li><a href="getPost.html">Get and Post</a></li>
+			</ul>
+		</div>
+		<!--Informative Content of the page-->	
+		<h1>What is HTTP and HTTPS?</h1>
+		<p><strong>HTTP</strong> stands for <strong>Hyper Text Transfer Protocol</strong>. Hyper text is simply  text that contains links to other text while Transfer Protocol 
+			describes how these hyper texts should be transferred. It is a fundamental part of the internet because the web is made up of endless amounts of links.</p>
+		<p>HTTP revolves around <span id="underline">client - server</span> communication. When a user wants to go to a website, they type in the URL which is them requesting access to the site. 
+			The server picks up this request and responds by giving the user the website they wanted. In this entire interaction, HTTP is the one carrying the user’s request and the server’s response.</p>
+		<p>The request and response cycle must follow the rules set by HTTP or else you might encounter an error such as the infamous ERROR 404.</p>
+		<!--Responsive image with varying sizes depending on size of screen-->
+		<picture>
+			<source media="(max-width: 500px)" srcset="images/error404Small.png">
+			<source media="(max-width: 900px)" srcset="images/error404Med.png">
+			<source media="(min-width: 1050px)" srcset="images/error404.png">
+			<img src="images/error404.png" alt="error404" id="error">
+		</picture>
+		<p><strong>HTTPS</strong> stands for <strong>Hyper Text Transfer Protocol Secure</strong> and is an extention of HTTP. Any data passed through HTTPS is encrypted by
+			<span id="underline">SSL</span>(Secure Sockets Layout) or <span id="underline">TSL</span>(Transport Security Layer).</p>	
+		<p>The main aim of HTTPS is to enforce a website's legitimacy and to protect the use from malicious attacks and tampering during the request and response cyle, especially
+			when dealing with passwords, credit cards and other sensitive information. Fortunately, most webpages we have now are using HTTPS.</p>
+		<!--Simple link back to the top of the page-->
+		<a href="#top" class="toTop">back to top</a>	   	
+	</div>
+</body>
+</html>

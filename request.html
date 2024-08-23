@@ -1,0 +1,75 @@
+<!-- Reivon Naballin, 1583822, Assignment One, COMPX222-22B-->
+<!doctype html>
+<htm lang="en-NZ">
+<head>
+    <meta charset="utf-8">
+    <title>Requests</title>
+    <link rel="stylesheet" href="css/style.css">
+	<!--GOOGLE FONT-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Poppins:ital@0;1&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="centre">	
+        <div>
+			<ul class="navBar">
+			  <li><a href="index.html">HTTP and HTTPS</a></li>
+			  <li><a href="webpageDownload.html">Webpage Download</a></li>
+			  <li class="is-active"><a>Requests</a></li>
+			  <li><a href="getPost.html">Get and Post</a></li>
+			</ul>
+		</div>
+        <h1>What is a request?</h1>
+		<picture>
+			<source media="(max-width: 500px)" srcset="images/requestSmall.png">
+			<source media="(max-width: 900px)" srcset="images/requestMed.png">
+			<source media="(min-width: 1050px)" srcset="images/request.png">
+			<img src="images/request.png" alt="request" id="request">
+		</picture>
+		<p>As previously mentioned in the ‘Webpage Download’, a <strong>request</strong> is made when the user interacts with a web page by clicking links, typing in URLs or submitting forms. 
+			The final goal of the request is to gain access to an asset/resource contained within the server and this starts with the <strong>request line</strong>.</p>
+		<div class="numberedList">
+			<h2>A request line is made up of three parts</h2>
+			<ol class="numbered">
+				<li class="text">A one-word command known as the <strong>method</strong> which tells the server what the user wants. The two most common methods are  <span id="underline">GET</span> and <span id="underline">POST</span>.</li>
+				<li class="text">The <strong>path</strong> within the URL which leads to the requested asset on the server.</li>
+				<li class="text">The <strong>version number</strong> of HTTP which shows the version that the request line tried to comply with.</li>
+			</ol>
+		</div>
+		<p>As an example, a request line found in the VMware Horizon web page is <code>GET /portal/webclient/icons-19431065/bg_image.jpg HTTP/1.1</code>.
+			The method for the request is <strong>GET</strong>, the path to the asset is <strong>/portal/webclient/icons-19431065/bg_image.jpg</strong>, and the version number is <strong>HTTP/1.1</strong>. By making this request, the user will then get the background image of the web page as a response.</p>
+		<p>The request line is then followed by the <strong>request header</strong>.  Consisting of 0 or more headers, it is used to add additional information about the request which the server will use to give a more precise response to the user’s needs. The previous example of the bg_image has a request header of <code>Accept-Language: en-US,en;q=0.9</code> . 
+			This isn’t very helpful because the request is for an image but if it was a text file and we specify a request header of <code>Accept-Language: fr, de</code> then we would then receive the text in French or German.</p>		
+		<p>Lastly, a request can also hold a <strong>message body</strong>. The message body is optional and it will depend on the method of the request. It generally contains input data for the server to use which means that it is necessary when making a POST request. 
+			However, a GET request doesn’t need to pass any input data which makes a request body inappropriate.</p>
+		<p class="reference">*based on information from <a href="https://www.ibm.com/docs/en/cics-ts/5.3?topic=protocol-http-requests">ibm.com</a>.*</p>
+		<table>
+			<h2>Common Error Codes from requests</h2>
+			<tr>
+				<th>Error Code</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>401 Unauthorised</td>
+				<td>Page unable to load due to invalid credentials and the server considers it as an unauthenticated request.</td>
+			</tr>
+			<tr>
+				<td>404 Not Found</td>
+				<td>The page that the user is requesting is not within the server. This is commonly caused by entering an invalid URL.</td>
+			</tr>
+			<tr>
+				<td>500 Internal Server Error</td>
+				<td>A simple error message indicating that there is something wrong with the server. Not very helpful in finding what and where the error may be.</td>
+			</tr>
+			<tr>
+				<td>502 Bad Gateway</td>
+				<td>The server tried to communicate with another server and received an invalid response. Usually appears when the server takes too long to provide a response.</td>
+			</tr>
+		</table>
+		<!--Accountability for the source of the information-->
+		<p class="reference">*information taken from <a href="https://themeisle.com/blog/what-are-http-error-codes/">themeisle.com</a>.*</p>
+		<a href="#top" class="toTop">back to top</a>
+	</div>
+</body>
+</html>

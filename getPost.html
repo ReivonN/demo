@@ -1,0 +1,66 @@
+<!-- Reivon Naballin, 1583822, Assignment One, COMPX222-22B-->
+<!doctype html>
+<htm lang="en-NZ">
+<head>
+    <meta charset="utf-8">
+    <title>GET and POST</title>
+    <link rel="stylesheet" href="css/style.css">
+	<!--GOOGLE FONT-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Poppins:ital@0;1&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="centre">	
+        <div>
+			<ul class="navBar">
+			  <li><a href="index.html">HTTP and HTTPS</a></li>
+			  <li><a href="webpageDownload.html">Webpage Download</a></li>
+			  <li><a href="request.html">Requests</a></li>
+			  <li class="is-active"><a>Get and Post</a></li>
+			</ul>
+		</div>
+        <h1>When to use GET and POST?</h1>
+		<!--2 column grid for the items in the page-->
+		<div class="container">
+			<div class="grid" id="A"><p>GET, POST, PUT, HEAD, DELETE, PATCH, OPTIONS, CONNECT and TRACE are all HTTP methods with <strong>GET</strong> and <strong>POST</strong> being the most commonly used. 
+				These are the same methods that were previously mentioned in the ‘Request’ page as part of the <span id="underline">request line</span>.</p>
+			</div>
+			<div class="grid" id="B">
+				<picture>
+					<source media="(max-width: 500px)" srcset="images/getPostSmall.png">
+					<source media="(max-width: 900px)" srcset="images/getPostMed.png">
+					<source media="(min-width: 1050px)" srcset="images/getPost.png">
+					<img src="images/getPost.png" alt="getPost" id="getPost">
+				</picture>
+				<h2>Key Points on GET and POST requests</h2>
+				<p class="reference">*according to <a href="https://www.w3schools.com/tags/ref_httpmethods.asp">w3schools.com*</a></p>
+			</div>
+			<div class="grid" id="C">
+				<ul class="getPost">
+					<li>GET requests can be cached</li>
+					<li>GET requests remain in the browser history</li>
+					<li>GET requests can be bookmarked</li>
+					<li>GET requests should never be used when dealing with sensitive data</li>
+					<li>GET requests have length restrictions</li>
+					<li>GET requests are only used to request data (not modify)</li>
+				</ul>
+			</div>
+			<div class="grid" id="D">
+				<ul class="getPost">
+					<li>POST requests are never cached</li>
+					<li>POST requests do not remain in the browser history</li>
+					<li>POST requests cannot be bookmarked</li>
+					<li>POST requests have no restrictions on data length</li>
+				</ul>
+			</div>
+			<div class="grid" id="F">
+				<p>We use GET to request and receive an asset from within the server and we use POST to create or update an asset in the server. However, GET is still capable of sending data but it is a lot riskier and less secure because the sent data becomes a part of a URL which can then be bookmarked and saved. 
+					It is highly recommended to use GET for its intended purpose of retrieving and to never use it when dealing with passwords or other sensitive information. POST offers a bit more security than GET because the parameters are not stored in the browser history or in the web server logs. </p>
+				<p>The general rule to follow when using these methods is to use GET when you want to <span id="underline">retrieve data</span> and use POST when you want to <span id="underline">send data</span>.</p>
+			</div>
+		</div>
+		<a href="#top" class="toTop">back to top</a>
+	</div>
+</body>
+</html>
